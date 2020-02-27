@@ -14,15 +14,16 @@
 }
 
 
-    .logo-pic{
-        background-image: url(../../assets/images/logo.png);
-        width: 14vw;
-    height: 12vh;
-    z-index: -2;
-    float: left;
+.logo-pic{
+    position: fixed;
+    background-image: url(../../assets/images/logo.png);
+    width: 14vw;
+    height: 20vh;
+    z-index: 9999999;
+    left: 60px;
     background-size: contain;
     background-repeat: no-repeat;
-    }
+}
 
 
 
