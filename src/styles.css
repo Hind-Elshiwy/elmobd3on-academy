@@ -4,7 +4,7 @@ html {
   overflow-x: hidden; }
 
 body {
-  line-height: 1.7;
+  line-height: .7;
   color: gray;
   font-weight: 400;
   font-size: 1rem; }
@@ -276,14 +276,15 @@ body:after {
     position: relative;
     left: 0;
     top: -5px; 
-    background-image: url(./assets/images/logo.png);
+
+    /* background-image: url(./assets/images/logo.png); */
     /* ../../assets/images/logo.png */
-    width: 10vw;
-    height: 15vh;
+    /* width: 12vw;
+    height: 12vh;
     margin-top: 1vh;
     float: left;
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
   }
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
