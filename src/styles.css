@@ -557,7 +557,7 @@ body:after {
   background-repeat: no-repeat;
   background-position: top;
   background-position: center center;
-  background-color: #ffdd40; }
+  background-color: rgb(249,184,53); }
   .site-blocks-cover.overlay {
     position: relative; }
     .site-blocks-cover.overlay:before {
