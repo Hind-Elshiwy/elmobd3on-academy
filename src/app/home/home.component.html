@@ -1,0 +1,496 @@
+
+
+
+
+<div id="overlayer"></div>
+<div class="loader">
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+
+<div class="site-wrap">
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+  
+  
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner"  id="home">
+
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <div class="col-6 col-xl-2">
+          <h1 class="mb-0 site-logo"><a href="#" class="h2 mb-0">أكاديمية المبدعون</a></h1>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-10  d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+
+            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+              <li><a href="#" class="nav-link">whats App</a></li>
+              <li><a href="#home-section" class="nav-link">الرئيسية</a></li>
+              <li class="has-children">
+                <a href="#" class="nav-link">خدماتنا</a>
+                <ul class="dropdown">
+                
+                  <li class="has-children">
+                    <a href="#">البحث العلمى</a>
+                    <ul class="dropdown">
+                      <li><a href="#blog-section" [routerLink]="['/details']" fragment="الاستبيان"  class="nav-link">الاستبيان</a></li>
+                      <li><a href="#blog-section" [routerLink]="['/details']" fragment="الاختبارات"  class="nav-link">الاختبارات</a></li>
+                      <li><a href="#blog-section" [routerLink]="['/details']" fragment="المقابلة"  class="nav-link">المقابلة</a></li>
+                      <li><a href="#blog-section" [routerLink]="['/details']" fragment="الملاحظة"  class="nav-link">الملاحظة</a></li>
+                      <li><a href="#blog-section" [routerLink]="['/details']" fragment="الاستبانةالالكترونية"  class="nav-link">الاستبانة الالكترونية</a></li>
+                      <li><a href="#blog-section" [routerLink]="['/details']" fragment="الاحصائي"  class="nav-link">التحليل الاحصائي ومناقشة النتائج</a></li>
+                      <li><a href="#blog-section" [routerLink]="['/details']" fragment="اللغوي"  class="nav-link">التدقيق اللغوي</a></li>
+                      <li><a href="#blog-section" [routerLink]="['/details']" fragment="الترجمة"  class="nav-link">الترجمة</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a href="#">الدراسات</a>
+                    <ul class="dropdown">
+                      <!-- (click)="showMoreDetails('hind')" -->
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="العناوين" >اقتراح العناوين</a></li>
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="االدراسة" >ادوات الدراسة</a></li>
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="كتابةالإطار" >كتابة الإطار النظري</a></li>
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="العناوين" >توفير المراجع وتلخيص الدراسات السابقة</a></li>
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="نقدالدراسات" >نقد الدراسات السابقة</a></li>
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="تقرير" >تقرير فحص السرقة الأدبية</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a href="#">البحث</a>
+                    <ul class="dropdown">
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="البحث" >كتابة خطة البحث</a></li>
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="الرسائل" >تنسيق البحوث والرسائل العلمية</a></li>
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="العلمية" >نشر البحوث العلمية</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a href="#">تحكيم</a>
+                    <ul class="dropdown">
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="الاستبانات" >تحكيم الاستبانات والدراسات</a></li>
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="تحكيمالبحوث" >تحكيم البحوث العلمية</a></li>
+                      <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="الدراسة" >تحكيم ادوات الدراسة</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              
+              <!-- <li><a href="#training-section" class="nav-link">آلية العمل</a></li> -->
+              <li><a href="#services-section" class="nav-link">من نحن</a></li>
+              <li><a href="#contact-section" class="nav-link">بيانات التواصل</a></li>
+            </ul>
+          </nav>
+        </div>
+
+
+        <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+      </div>
+    </div>
+    
+  </header>
+
+
+  <section class="site-blocks-cover overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 align-self-center">
+
+          <div class="row">
+            <div class="col-lg-11" style="direction: rtl;">
+
+              <!-- <h1>We are <span class="typed-words"></span></h1> -->
+              <ngx-typed-js [strings]="['اكاديميه', 'اكاديميه المبدعون']" [typeSpeed]="100">
+                <h2 id="welcome">  اهلا وسهلا بك فى <span class="typing"></span>  </h2>
+              </ngx-typed-js>
+              <p> للبحث العلمي والخدمات الأكاديمية. نسعد دائما بخدمتك، كما نسعى جاهدين لإرضائك وأن نكون عند حسن ظنك</p>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section> 
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12" style="margin-top: -7%;">
+          <div class="slide-one-item home-slider owl-carousel">
+            <img src="assets/images/2.jpeg" alt="Image for a service" class="img-fluid img">
+            <img src="assets/images/4.jpeg" alt="Image for a service" class="img-fluid img">
+            <img src="assets/images/5.jpeg" alt="Image for a service" class="img-fluid img">
+            <img src="assets/images/1.jpeg" alt="Image for a service" class="img-fluid img">
+            <img src="assets/images/6.jpeg" alt="Image for a service" class="img-fluid img">
+            <img src="assets/images/7.jpeg" alt="Image for a service" class="img-fluid img">
+            <img src="assets/images/8.jpeg" alt="Image for a service" class="img-fluid img">
+            <img src="assets/images/9.jpeg" alt="Image for a service" class="img-fluid img">
+            <img src="assets/images/10.jpeg" alt="Image for a service" class="img-fluid img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-section" id="about-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-4 mb-3">
+          <h2 class="text-black" style="text-align: center;">رؤيتنا </h2>
+          <p style="text-align: center;">خدمات بحثية متميّزة وعلى أعلى مستوى، إيماناً بضرورة خلق بيئة توعوية ومجتمع معرفي ينافس محلياً وعالمياً. لبناء مجتمع معرفي منافس عالمياً</p>
+        </div>
+        <div class="col-4 mb-3">
+          <h2 class="text-black" style="text-align: center;">رسالتنا </h2>
+          <p style="text-align: center;">توفير خدمات للطلبة والأكاديميين والمساهمة الفعالة في مساندتهم لبلوغ طموحاتهم من خلال زيادة فاعلية البحث العلمي ورفع جودة مخرجاته</p>
+        </div>
+        <div class="col-4 mb-3">
+          <h2 class="text-black" style="text-align: center;">قيمنا الجوهرية </h2>
+          <p style="text-align: center;"> الإبداع ، الجودة ، الإتقان ، سرعة وسرية العمل، المصداقيّة. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="site-section bg-light" id="training-section">
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-md-7 text-center">
+          <!-- <h2 class="text-black">Our Training</h2> -->
+          <p>ما دمت قد وصلت إلينا فحياك الله في أقوى أكاديمية للبحث العلمي والخدمات الطلابيّة، لنساعدك على الإبداع في رسالة الدكتوراه، رسالة الماجستير، بحث التخرج ، المشاريع ،الترجمة ، البرمجة ، التصاميم ،البحوث ، العروض التقديمية ، التكاليف والواجبات ، فكل ما تحتاجه لدينا </p>
+          <p>للتعرف على خدماتنا <a [routerLink]="['/details']">انقر هنا</a> </p>
+          <p>!نسعد بمساعدتك وتقديم العون لك في أسرع وقت. نتمنى لكَ قراءةَ مُمتعة وتصفح مفيد لموقعنا</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section class="site-section" id="services-section">
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-md-7 text-center">
+          <h2 class="text-black">من نحن</h2>
+          <h5>أكاديمية المبدعون للبحث العلمي والخدمات الأكاديمية</h5>
+          <p> 
+            فريق اكاديمي مُبدع متخصص يقدم أفضل الاستشارات التعليمية والخدمات الأكاديمية للطلبة والموظفين والمدراء وجميع فئات المجتمع.
+            نقدم خدماتنا الأكاديمية والبحثية  للطلاب بجميع مراحلهم التعليمية  بما يشمل البكالوريوس و الماجستير والدكتوراه. المساعدة في اعداد رسائل الدكتوراه والماجستير وأبحاث النشر والترقية والنشر العلمي والأبحاث العلمية ومشاريع التخرج والواجبات في كافة التخصصات وغيرها من الخدمات الاكاديمية التي من شأنها تمكين الطلبة وتعزيز دورهم في المجتمع، والتي تثري مسيرتهم التعليمية والعلمية، وتصقل مهاراته بما يؤهله لاجتياز العقبات التي قد تواجههم أثناء عملية اعداد رسائل الماجستير والدكتوراه. 
+            نضع مصلحة الطالب نصب أعيننا، وكما أننا على جاهزية تامة لتوفير كل ما يلزم في اعداد واثراء بحثه العلمي على أيدي خيرة المختصين من حملة الماجستير والدكتوراه في كافة التخصصات العلمية والأدبية.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="site-section" id="testimonials-section" data-aos="fade">
+    <div class="container">
+      
+      <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-lg-6 text-center mb-5">
+          <h2 class="text-black mb-2">تخصصاتنا</h2>
+        </div>
+      </div>
+      <div  data-aos="fade-up" data-aos-delay="200">
+        <div class="owl-carousel owl-style owl-carousel-one no-owl-nav">
+          <div>
+            <div class="block-testimony-1 text-center">
+              <h3 class="font-size-20 text-black">الأدبية </h3>
+              <blockquote class="mb-4">
+                <p>&ldquo;ومنها على سبيل الذكر لا الحصر (اللغات ،التخصصات  التربوية ،القانون ،الشريعة،الفقه، الثقافة الإسلامية ،علم النفس ،علم الاجتماع ، مناهج وطرق تدريس، إدارة اعمال ، موارد بشرية، فلسفة ، اللغة العربية، اللغة الإنجليزية ، أصول التربية ، الأدب، الصحة النفسية ،المحاسبة ، الجغرافيا، الاقتصاد، الإعلام ، سياسة ،زراعة ، انون دولي-فضلا عن كاف التخصصات الشرعية (سيرة-تفسير-عقيدة-دعوة-استخراج احاديث.....))&rdquo;</p>
+              </blockquote>
+
+              
+            </div>
+          </div>
+
+          <div>
+            <div class="block-testimony-1 text-center">
+
+              
+              <h3 class="font-size-20 mb-4 text-black">العلمية </h3>
+
+              <blockquote class="mb-4">
+                <p>&ldquo;التخصصات الطبية ( الطب البشري ، الصيدلة ، التمريض ، العلاج الطبيعي والوظيفي ، الأطراف الصناعية، السمع والنطق ...)&rdquo;</p>
+              </blockquote>
+
+              
+
+              
+            </div>
+          </div>
+
+          <div>
+            <div class="block-testimony-1 text-center">
+
+              
+              <h3 class="font-size-20 mb-4 text-black">العلمية </h3>
+
+              <blockquote class="mb-4">
+                <p>&ldquo;التخصصات الهندسية ( هندسة كهربائية ،هندسة كيميائية وبترول ،هندسة صناعية ،هندسة ميكاترونكس، هندسة ميكانيكية ، هندسة اتصالات ،هندسة برمجيات وغيرها)&rdquo;</p>
+              </blockquote>
+
+              
+
+              
+            </div>
+          </div>
+
+          <div>
+            <div class="block-testimony-1 text-center">
+
+              
+              <h3 class="font-size-20 mb-4 text-black">العلمية </h3>
+
+              <blockquote class="mb-4">
+                <p>&ldquo;التخصصات العلمية ( الرياضيات، الإحصاء ، الكيمياء ،الفيزياء ،الأحياء،علوم الأرض وغيرها )&rdquo;</p>
+              </blockquote>
+
+              
+
+              
+            </div>
+          </div>
+
+          <div>
+            <div class="block-testimony-1 text-center">
+
+              
+              <h3 class="font-size-20 mb-4 text-black">العلمية </h3>
+
+              <blockquote class="mb-4">
+                <p>&ldquo;تخصصات الحاسب الآلي ( البرمجة ،الشبكات ، أمن المعلومات ، هندسة برمجيات ، علم حاسب ..)&rdquo;</p>
+              </blockquote>
+
+              
+
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="site-section bg-light" id="training-section">
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-md-7 text-center">
+          <!-- <h2 class="text-black">Our Training</h2> -->
+        <p> نقوم بإعداد الابحاث والرسائل العلمية ذو المحتوى الأصيل والخالي من السرقات  الأدبية بكل مصداقية وامانة ،كما اننا نحافظ على السرية التامة بالعمل
+        تقوم أكاديمية المبدعون بتقديم الضمانات للطالب من حيث أصالة المحتوى حيث يتم كتابته وفحصه من اقوى مواقع فحص السرقة الادبية وتزويدكم بالتقرير للرسائل .
+        ايضا نمتاز بمصداقية الانجاز بأسرع وقت ممكن وبأعلى جودة مع ضمان تسليم العمل في الموعد المتفق عليه 
+        </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="site-section" id="services-section">
+    <div class="container">
+
+      <div class="nonloop-block-13 owl-style owl-style-md owl-carousel">
+        <div class="service">
+          <div class="icon"><span class="flaticon-badge display-1 text-primary"></span></div>
+          <h3 class="text-black mb-3" style="text-align: center;">لماذا المبدعون</h3>
+          <p style="text-align: center;"> باعتبارها أقوى اكاديمية تقدم الخدمات العلمية  لجميع الجامعات العربية والمبتعثين بالخارج بكل احترافية بإبداع منقطع النظير ، فشعارنا الابداع والتميز، فقد سعت أكاديمية المبدعون على تقديم الافضل وبأعلى جودة على أيدي  كوادر أكاديمية محترفة ومتخصصة في كتابة البحوث والأوراق العلمية مع ضمان حق الطالب والتي تزيد من مصداقيتنا بالتعامل مع كافة الطلبة والباحثين والحفاظ على السرية التامة بالعمل مع حفظ الخصوصية ، بالإضافة الى الاهتمام باتباع دليل إعداد الرسائل الخاص بالجامعة الملتحق بها والكفيلة بإبعاد الطالب عن أي مشاكل أكاديمية محتملة مثل مشكلة الانتحال الأدبي وغيرها الكثير</p>
+        </div>
+
+        <div class="service">
+          <div class="icon"><span class="flaticon-target display-1 text-primary"></span></div>
+          <h3 class="text-black mb-3" style="text-align: center;">خبرائنا الأكاديميين</h3>
+          <p style="text-align: center;">تمتلك أكاديمية المبدعون للبحث العلمي والخدمات الأكاديمية مجموعة كبيرة من المختصين ذوي الخبرة والكفاءة العالية في اعداد الرسائل العلمية والبحوث  وتقديم كافة الخدمات الأكاديمية المختلفة لجميع التخصصات وكافة المجالات من حملة الماجستير والدكتوراه من دول مختلفة كالأردن والسعودية، وفلسطين، ومصر والعراق</p>
+        </div>
+
+        <div class="service">
+          <div class="icon"><span class="flaticon-agreement display-1 text-primary"></span></div>
+          <h3 class="text-black mb-3" style="text-align: center;">ضمان جودتنا</h3>
+          <p style="text-align: center;">تضمن أكاديمية المبدعون للبحوث والخدمات الأكاديمية، الدقة في العمل والمصداقية في التعامل. كما ويمكنكم الاطلاع على آراء بعض الطلبة الذين استفادوا من خدماتنا.
+            حيث تضمن لكم أكاديمية المبدعون الأصالة في المحتوى بحيث تكون خالية من السرقة الادبية وعلى أيدي مختصين ذو كفاءة عالية وأساتذة جامعات، بالإضافة الى ضمان مراجعة أي عمل قبل تسليمه للباحث والتأكد من جودة العمل وتدقيقه لغوياً.
+            أيضا تضمن لكم أكاديمية المبدعون تسليم العمل بالوقت المتفق عليه والالتزام بكافة التعديلات المطلوبة على اكمل وجه</p>
+        </div>
+
+        <div class="service">
+          <div class="icon"><span class="flaticon-line-chart display-1 text-primary"></span></div>
+          <h3 class="text-black mb-3" style="text-align: center;">أسس ومعايير نجاح البحث العلمي</h3>
+          <p style="text-align: center;">
+            كتابة البحث بطريقة أكاديمية <br/>
+            توثيق المراجع والمصادر التي تم الرجوع اليها أثناء البحث<br/>
+            كتابة محتوى أصيل وخالي من السرقة الادبية<br/>
+              الاهتمام بأخلاقيات الكتابة البحثية<br/>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <div class="site-section bg-light" id="contact-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="text-black">Contact Us</h2>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
+          <p class="mb-0 font-weight-bold" style="text-align: center;"> البريد الالكتروني</p>
+          <p class="mb-0" style="text-align: center;"><a href="#">youremail@domain.com</a></p>
+        </div>
+        <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
+          <p class="mb-0 font-weight-bold" style="text-align: center;">الرقم السعودي</p>
+          <p class="mb-4" style="text-align: center;"><a href="#"> 0545664142</a></p>
+          <p class="mb-0 font-weight-bold" style="text-align: center;"> خارج السعودية </p>
+          <p class="mb-4" style="text-align: center;"><a href="#"> 00966545664142</a></p>
+        </div>
+        <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
+          <!-- <p class="mb-0 font-weight-bold">Address</p> -->
+          <p class="mb-4" style="text-align: center;">
+          
+          للطلب والاستفسار يرجى التسجيل في موقعنا <br/>
+          <a href="#">اطلب الخدمة الان</a>  
+        </div>
+      
+        
+      </div>
+      <div class="row">
+        <div class="col-lg-12 mb-5">
+          <form [formGroup]="contactUsForm" (ngSubmit)="submit(contactUsForm.value)">
+            <div class="form-group row">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <input type="text" class="form-control" placeholder="الاسم الاول" [formControl]="firstName" >
+                <div *ngIf="firstName.invalid &&  firstName.touched && firstName.errors.required" style="color: red;">
+                 الاسم الاول مطلوب
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="اسم العائلة" [formControl]="lastName">
+                <div *ngIf="lastName.invalid &&  lastName.touched && lastName.errors.required" style="color: red;">
+                  اسم العائلة مطلوب
+                </div>
+              </div>
+            </div>
+           
+            <div class="form-group row">
+              <div class="col-md-12">
+                <input type="email" class="form-control" placeholder="البريد الالكترونى"
+                placeholder="Ex. pat@example.com" [formControl]="email">
+                <div *ngIf=" email.invalid &&  email.touched  && email.dirty && email.hasError('email') && !email.hasError('required')"  style="color: red;">
+                  ادخل بريد الكترونى صحيح
+              </div>
+              <div *ngIf="email.invalid &&  email.touched && email.hasError('required')"  style="color: red;">
+                البريد الاكترونى <strong>مطلوب</strong>
+              </div>  
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-md-12">
+                <textarea name="" id="" class="form-control" placeholder="اكتب رسالتك" cols="30" rows="10" [formControl]="message"></textarea>
+                <div *ngIf="message.invalid &&  message.touched && message.errors.required" style="color: red;">
+                  ادخل رسالتك 
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-6 mr-auto">
+                <input type="submit" class="btn btn-block btn-primary text-white py-2 px-5" value="ارسال">
+              </div>
+            </div>
+            <div class="col-md-12 mr-auto">
+              <flash-messages></flash-messages>
+
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="footer-heading mb-4">خدماتنا مميزة</h2>
+          <p style="text-align: right;">
+              المساعدة في اقتراح عناوين رسائل الماجستير والدكتوراه
+            <br/> عمل خطة الرسالة كاملة بكل مفرداتها (المقدمة _ المشكلة _ الأهمية _ الأهداف _ المنهج _الأدوات _ الفرضيات _ الدراسات السابقة _ المصادر والمراجع ...... )
+            <br/> المساعدة في إعداد رسائل الماجستير والدكتوراه من المقدمة إلى الخاتمة.*المساعدة في الخدمات الاكاديميه، (طباعة، ترجمة، مراجعه لغوية، تنسيق...الخ)
+            <br/> إعداد مشاريع التخرج لطلبة وطالبات البكالوريوس في جميع التخصصات وحل الواجبات الجامعية
+            <br/> المساعدة في تصميم أدوات الدراسة 
+            <br/> اعداد أبحاث النشر والترقية في كافة التخصصات
+            <br/> توفير المراجع والمصادر والدراسات العلمية حديثة النشر حسب محاور ومتغيرات البحث الخاص بكم
+            <br/> نقد الدراسات العلمية سواء بالإيجاب أو القبول
+            <br/> المساعدة في فحص نسبة الانتحال الأدبي من خلال أقوى مواقع الفحص
+            <br/> المساعدة في كتابة سيرة ذاتية جذابة
+            <br/> المساعدة في اعداد عروض بوربوينت PowerPoint، عروض بريزي Prezi، عروض فليب بوك Flip Book ، مجلات ورقية وإلكترونية
+            <br/> المساعدة في كتابة البحوث
+            <br/> المساعدة في التحليل الاحصائي وعرض وتفسير النتائج 
+            <br/> توفير الدراسات - الترجمة الأكاديمية - توفير وتحكيم أدوات الدراسة
+            <br/> تقديم الاستشارات والمساعدة في التكاليف الجامعيَّة
+            <br/> خدماتنا مقدمة من دكاترة ومختصين كفؤ
+            <br/> التفريغ الصوتي للمحاضرات
+            <br/> حلول واجبات
+            <br/> التصميم الجرافييكي  (شعارات – بوستر مطويات الانفوجرافيك) 
+            <br/> تلخيص الكتب 
+            <br/> خدمات أخرى </p>
+        </div>
+
+
+        <div class="col-md-3 ml-auto">
+          <h2 class="footer-heading mb-4">Quick Links</h2>
+          <ul class="list-unstyled">
+            <li><a href="#about-section" class="smoothscroll">من نحن</a></li>
+            <li><a href="#" class="smoothscroll">خدماتنا</a></li>
+            <li><a href="#contact-section" class="smoothscroll">بيانات التواصل</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <!-- <div class="mb-5">
+            <h2 class="footer-heading mb-4">متابعتنا</h2>
+            <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+          </div> -->
+
+          <form action="#" method="post" class="footer-subscribe">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="ادخل بريدك الالكترونى" aria-label="ادخل بريدك الالكترونى" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary text-black" type="button" id="button-addon2">ارسال</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>  
+
+    </div>
+  </footer>
+
+</div> <!-- .site-wrap -->

@@ -1,0 +1,19 @@
+.flash-message
+{
+    z-index: 10000;
+    position: relative;
+}
+
+.alert-success{
+    background-color: green;
+}
+
+.alert-error{
+    background-color: red;
+}
+
+
+
+
+
+
