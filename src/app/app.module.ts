@@ -24,6 +24,7 @@ import { AdminServisesComponent } from './admin/admin-servises/admin-servises.co
 import { AdminGuestsComponent } from './admin-guests/admin-guests.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     OurServicesComponent,
     PageNotFoundComponent,
     AdminGuestsComponent,
+    AdminOrdersComponent,
 
   ],
   imports: [

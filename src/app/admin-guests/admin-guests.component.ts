@@ -4,11 +4,19 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { AdminService } from './admin.service';
 
-export interface UserData {
+export interface GuestData {
   number: string;
   name: string;
   email: string;
   message: string;
+}
+
+export interface OrderData {
+  number: string;
+  name: string;
+  email: string;
+  phone: string;
+  data: boolean
 }
 
 
@@ -19,7 +27,7 @@ export interface UserData {
 })
 export class AdminGuestsComponent implements OnInit {
   displayedColumns: string[] = ['number', 'name', 'email', 'message'];
-  dataSource: MatTableDataSource<UserData>;
+  dataSource: MatTableDataSource<GuestData>;
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -49,12 +57,12 @@ export class AdminGuestsComponent implements OnInit {
     }
   }
   /** Builds and returns a new User. */
-  createNewUser(id: number): UserData {
-    let guest = this.guests[id-1],
+  createNewUser(num: number): GuestData {
+    let guest = this.guests[num-1],
         {firstName, lastName, email, message} = guest,
         name = firstName + " " + lastName
     return {
-      number: id.toString(),
+      number: num.toString(),
       name,
       email,
       message

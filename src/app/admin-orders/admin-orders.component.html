@@ -2,7 +2,7 @@
 
     <div class="limiter" style="text-align: center;">
         <div class="container-table100">
-            <h2 style="width: 100%;color: aliceblue; font-weight: bold;">Guests</h2>
+            <h2 style="width: 100%;color: aliceblue; font-weight: bold;">Orders</h2>
             <div class="wrap-table100">
                 <mat-form-field>
                     <mat-label>Filter</mat-label>
@@ -21,7 +21,7 @@
                       <!-- Email Column -->
                       <ng-container matColumnDef="email">
                         <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
-                        <td mat-cell *matCellDef="let row"> {{row.email}}% </td>
+                        <td mat-cell *matCellDef="let row"> {{row.email}} </td>
                       </ng-container>
                   
                       <!-- Name Column -->
@@ -30,10 +30,28 @@
                         <td mat-cell *matCellDef="let row"> {{row.name}} </td>
                       </ng-container>
                   
-                      <!-- Message Column -->
-                      <ng-container matColumnDef="message">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Message </th>
-                        <td mat-cell *matCellDef="let row"> {{row.message}} </td>
+                      <!-- Phone Column -->
+                      <ng-container matColumnDef="phone">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>
+                        <td mat-cell *matCellDef="let row"> {{row.phone}} </td>
+                      </ng-container>
+
+                       <!-- Service Column -->
+                       <ng-container matColumnDef="service">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Service Type </th>
+                        <td mat-cell *matCellDef="let row"> {{row.service}} </td>
+                      </ng-container>
+
+                      <!-- Files Column -->
+                      <ng-container matColumnDef="files">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Files </th>
+                        <td mat-cell *matCellDef="let row">
+                            <p *ngIf="!row.data">No Files</p>
+                            <a (click)="trial(row._id)" style="cursor:pointer; text-decoration: underline; color: slateblue ;">
+                                <p *ngIf="row.data">Download Files</p>
+                            </a>
+                            
+                        </td>
                       </ng-container>
                   
                       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

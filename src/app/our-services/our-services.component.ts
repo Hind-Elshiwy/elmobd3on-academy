@@ -141,7 +141,7 @@ export class OurServicesComponent implements OnInit {
       lastName:['',Validators.required],
       phone:['', Validators.required],
       service: ['', Validators.required],
-      files: [null, [Validators.required]]
+      files: [null, []]
     });
   }
 

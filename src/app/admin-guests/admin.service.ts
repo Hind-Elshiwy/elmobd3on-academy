@@ -14,4 +14,13 @@ export class AdminService {
   public getGuests() :Observable<Object> {
     return this.httpClient.get<Object>(API_URL + '/guests');
    }
+   public getOrders() :Observable<Object> {
+    return this.httpClient.get<Object>(API_URL + '/orders');
+   }
+
+   public getOrderFiles(id) :Observable<Blob> {
+    return this.httpClient.get<Blob>(API_URL + '/orders/' + id + '/files', {
+      responseType: 'blob' as 'json'
+    });
+   }
 }
