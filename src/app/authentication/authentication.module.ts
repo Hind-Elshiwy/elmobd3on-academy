@@ -9,6 +9,10 @@ import { AdminServisesComponent } from '../admin/admin-servises/admin-servises.c
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor } from 'src/_helpers/jwt.interceptor';
 import { ErrorInterceptor } from 'src/_helpers/error.interceptor';
+import { AdminOrdersComponent } from '../admin/admin-orders/admin-orders.component';
+import { AdminGuestsComponent } from '../admin/admin-guests/admin-guests.component';
+import { MatPaginatorModule, MatTableModule, MatInputModule } from '@angular/material';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 
 
 @NgModule({
@@ -17,11 +21,16 @@ import { ErrorInterceptor } from 'src/_helpers/error.interceptor';
         FormsModule,
         ReactiveFormsModule,
         AuthenticationRoutingModule,
+        MatPaginatorModule,
+        MatTableModule,
+        MatInputModule,
     
     ],
     declarations: [
         LoginComponent,
-        AdminServisesComponent
+        AdminServisesComponent,
+        AdminOrdersComponent,
+        AdminGuestsComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
