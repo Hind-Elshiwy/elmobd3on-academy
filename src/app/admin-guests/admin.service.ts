@@ -4,23 +4,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 const API_URL = environment.apiURL;
-// const httpOptions = {
-//     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-// };
-
-
-
 
 @Injectable({
   providedIn: 'root'
 })
-export class HomeService {
+export class AdminService {
 
   constructor(private httpClient: HttpClient) { }
-
-
-  public create(data) :Observable<Object> {
-    return this.httpClient.post<Object>(API_URL + '/guests', data);
+  public getGuests() :Observable<Object> {
+    return this.httpClient.get<Object>(API_URL + '/guests');
    }
-
 }
