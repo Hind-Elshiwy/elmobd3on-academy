@@ -7,7 +7,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { saveAs } from 'file-saver';
 
 export interface OrderData {
-  _id: string;
+  id: string;
   number: string;
   name: string;
   email: string;
@@ -60,11 +60,11 @@ export class AdminOrdersComponent implements OnInit {
         {_id, firstName, lastName, email, phone, service, files} = order,
         name = firstName + " " + lastName,
         data = (files.length > 0);
-      
+    console.log(order)
     
     return {
       number: num.toString(),
-      _id,
+      id: _id,
       name,
       email,
       phone,

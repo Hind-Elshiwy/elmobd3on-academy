@@ -91,7 +91,7 @@ export class OurServicesComponent implements OnInit {
  
   // @Input() urlName: string;
 
-  // matcher = new MyErrorStateMatcher();
+  matcher = new MyErrorStateMatcher();
   constructor(
     private route: ActivatedRoute,
     private fb: FormBuilder,
@@ -168,8 +168,9 @@ export class OurServicesComponent implements OnInit {
   
       this.servicesService.createService(formData).subscribe(data => {
         this._flashMessagesService.show('تم ارسال الطلب', { cssClass: 'alert-success', timeout: 5000 });
+        this.ServicesForm.reset()
         }, err => {
-        this._flashMessagesService.show('يرجا اعاده المحاوله مره اخرى لحجز الخدمه ', { cssClass: 'alert-error', timeout: 5000 });
+        this._flashMessagesService.show('برجاء اعاده المحاوله مره اخرى لحجز الخدمه ', { cssClass: 'alert-error', timeout: 5000 });
       }
       );   
     }

@@ -19,8 +19,6 @@ import { CheckBoxModule  } from '@syncfusion/ej2-angular-buttons';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
-import { LoginComponent } from './authentication/component/login/login.component';
-import { AdminServisesComponent } from './admin/admin-servises/admin-servises.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 @NgModule({

@@ -47,7 +47,7 @@
                         <th mat-header-cell *matHeaderCellDef mat-sort-header> Files </th>
                         <td mat-cell *matCellDef="let row">
                             <p *ngIf="!row.data">No Files</p>
-                            <a (click)="trial(row._id)" style="cursor:pointer; text-decoration: underline; color: slateblue ;">
+                            <a (click)="trial(row.id)" style="cursor:pointer; text-decoration: underline; color: slateblue ;">
                                 <p *ngIf="row.data">Download Files</p>
                             </a>
                             

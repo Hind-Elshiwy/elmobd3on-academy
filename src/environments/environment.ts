@@ -7,8 +7,7 @@ export const environment = {
   staging: false,
   development: true,
   apiURL: 'http://127.0.0.1:8000/api',
-  // apiURL: 'https://cbaf05c5.ngrok.io/api',
-
+  // apiURL: 'http://almobdeon.com/api'
 };
 
 /*
