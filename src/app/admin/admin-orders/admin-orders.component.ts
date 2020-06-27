@@ -57,14 +57,13 @@ export class AdminOrdersComponent implements OnInit {
   /** Builds and returns a new User. */
   createNewOrder(num: number): OrderData {
     let order = this.orders[num-1],
-        {_id, firstName, lastName, email, phone, service, files} = order,
+        {id, firstName, lastName, email, phone, service, files} = order,
         name = firstName + " " + lastName,
         data = (files.length > 0);
-    console.log(order)
     
     return {
       number: num.toString(),
-      id: _id,
+      id,
       name,
       email,
       phone,

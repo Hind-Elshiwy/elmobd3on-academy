@@ -17,6 +17,7 @@ All other errors are RE-THROWN to be caught by the calling service so an alert c
      constructor(private authenticationService: AuthenticationService){}
 
      intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
+        if (request.headers.get('noguard')) return next.handle(request.clone());
         return next.handle(request)
         .pipe(
             catchError(err => {

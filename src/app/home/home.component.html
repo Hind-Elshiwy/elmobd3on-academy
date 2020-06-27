@@ -31,11 +31,11 @@
     <div class="container">
       <div class="row align-items-center">
 
-        <div class="col-12 col-sm-12 col-md-10  d-xl-block">
+        <div class="col-12 col-sm-12 col-md-10 d-xl-block">
           <nav class="site-navigation position-relative text-right" role="navigation">
 
             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-              <li><a href=" https://api.whatsapp.com/send?phone=+545664142" class="nav-link"> 
+              <li><a href=" https://wa.me/966545664142" class="nav-link"> 
                 تحدث معنا مباشرة
                 <i class="fa fa-whatsapp" style="font-weight: bolder;font-size: 25px;margin-left: 2px; color: green;"></i></a></li>
               <li><a href="#home-section" class="nav-link">الرئيسية</a></li>
@@ -90,6 +90,22 @@
               <!-- <li><a href="#training-section" class="nav-link">آلية العمل</a></li> -->
               <li><a href="#services-section" class="nav-link">من نحن</a></li>
               <li><a href="#contact-section" class="nav-link">بيانات التواصل</a></li>
+            </ul>
+            <ul class="site-menu main-menu js-clone-nav mr-auto d-lg-none">
+              <li class="has-children">
+                <a href="#" class="nav-link">خدماتنا</a>
+                <ul class="dropdown">
+                  <li>
+                    <a href="#blog-section" [routerLink]="['/details']" fragment="الاستبيان"  class="nav-link">البحث العلمى</a>
+                  </li>
+                  <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="الدراسات" >اقتراح العناوين</a></li>
+                  <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="البحث" >كتابة خطة البحث</a></li>
+                  <li><a href="javascript:void(0)" [routerLink]="['/details']" fragment="الاستبانات" >تحكيم </a></li>
+                </ul>
+              </li>
+              <li><a href="https://wa.me/966545664142" class="nav-link"> 
+                تحدث معنا مباشرة
+                <i class="fa fa-whatsapp" style="font-weight: bolder;font-size: 25px;margin-left: 2px; color: green;"></i></a></li>
             </ul>
           </nav>
         </div>
@@ -370,7 +386,7 @@
         </div>
         <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
           <p class="mb-0 font-weight-bold" style="text-align: center;">الرقم السعودي</p>
-          <p class="mb-4" style="text-align: center;"><a href="#"> +545664142</a></p>
+          <p class="mb-4" style="text-align: center;"><a href="#">545664142</a></p>
           <p class="mb-0 font-weight-bold" style="text-align: center;"> خارج السعودية </p>
           <p class="mb-4" style="text-align: center;"><a href="#"> +9620792276662</a></p>
         </div>

@@ -18,10 +18,8 @@ There can be other conditions too, like role based authentication
      canActivate(router: ActivatedRouteSnapshot, state: RouterStateSnapshot){
         // check if the user is logged in
         if(localStorage.getItem('currentUser')){
-            console.log('geting current user from interseptor  Authgurd')
             return true;
         }
-console.log(state.url )
         // not logged in so redirect to login page with the return url
         this.router.navigate(['/admin/login']);
         return false;

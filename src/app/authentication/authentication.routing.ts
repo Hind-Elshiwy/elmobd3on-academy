@@ -5,7 +5,7 @@ import { AdminServisesComponent } from '../admin/admin-servises/admin-servises.c
 import { AuthGuard } from '../_guards/auth.guard';
 
 export  const routes: Routes = [
-    { path: '', component: AdminServisesComponent, canActivate: [AuthGuard]   },   //, canActivate: [AuthGuard]   
+    { path: '', component: AdminServisesComponent, canActivate: [AuthGuard]   }, 
     { path: 'login', component: LoginComponent },
 ];
 

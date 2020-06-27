@@ -18,9 +18,9 @@ export class HomeService {
 
   constructor(private httpClient: HttpClient) { }
 
-
+  noAuthHeader = { headers: new HttpHeaders({ "noauth": "true" }) };
   public create(data) :Observable<Object> {
-    return this.httpClient.post<Object>(API_URL + '/guests', data);
+    return this.httpClient.post<Object>(API_URL + '/guests', data, this.noAuthHeader);
    }
 
 }

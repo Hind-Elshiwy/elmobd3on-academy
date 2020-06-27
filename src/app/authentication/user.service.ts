@@ -9,8 +9,4 @@ import { User } from "../_models";
 export class UserService{
     constructor(private http: HttpClient){}
 
-    // get all the users details from the backend
-    getAll(){
-        return this.http.get<User[]>('http://localhost:8000'+'/users');
-    }
 }

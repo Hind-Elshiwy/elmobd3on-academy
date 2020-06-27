@@ -74,7 +74,7 @@ export class HomeComponent implements OnInit {
       this.homeService.create(data).subscribe(data => {
         this._flashMessagesService.show('تم ارسال رسالتك بنجاح وسوف نرد عليك باقرب وقت ممكن ', { cssClass: 'alert-success', timeout: 5000 });
       },err=>{
-        this._flashMessagesService.show(err.message, { cssClass: 'alert-error', timeout: 5000 });
+        this._flashMessagesService.show('برجاء اعاده المحاوله مره اخرى او مراسلتنا لمساعدتك', { cssClass: 'alert-error', timeout: 5000 });
       });
     }
   }

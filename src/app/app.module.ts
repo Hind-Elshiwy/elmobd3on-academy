@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptor } from 'src/_helpers/jwt.interceptor';
+import { ErrorInterceptor } from 'src/_helpers/error.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +23,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { AdminService } from './admin/admin.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +54,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MaterialFileInputModule,
     FlashMessagesModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+],
   exports:[
     MatInputModule,
     MatAutocompleteModule

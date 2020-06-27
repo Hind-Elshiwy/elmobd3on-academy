@@ -59,17 +59,13 @@ export class LoginComponent implements OnInit {
     //   .pipe(first())
       .subscribe(
           data => {
-              console.log(data['token'])
-              let returndata= data['token'].split(' ')[1].split('.')[1]
-              let login_data = atob(returndata)
-              console.log(login_data)
-              localStorage.setItem('currentUser',login_data)
+              this.authenticationService.setToken(data['token'])
               
               this.router.navigate([this.returnUrl]);
           },
           error => {
-              this.error = error.message;
-              console.log(error)
+              if(error.status == 401) this.error = "اسم المستحدم او كلمة المرور غير صحيحة"
+              else this.error = "حدث خطأ ما برجاء المحاولة مرة اخري فيما بعد"
               this.loading = false;
           }
       )

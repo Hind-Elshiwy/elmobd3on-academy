@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { map } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Router } from "@angular/router";
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 // authentication service is used to LOGIN and LOGOUT of the application
@@ -12,16 +12,38 @@ import { Observable } from 'rxjs';
 const API_URL = environment.apiURL;
 @Injectable({providedIn: 'root'})
 export class AuthenticationService {
-    constructor(private HttpClient: HttpClient){}
-
+    constructor(private HttpClient: HttpClient, private router: Router){}
+    noAuthHeader = { headers: new HttpHeaders({ "noauth": "true", "noguard": "true" }) };
     // login
     public login(email, password):Observable<Object>{
-        return this.HttpClient.post<any>(API_URL +'/admins/signin', {email,password});
+        return this.HttpClient.post<any>(API_URL +'/admins/signin', {email,password}, this.noAuthHeader);
     }
        
     // logout
     logout(){
         // remove user from local storage
         localStorage.removeItem('currentUser');
+        this.router.navigate(['/admin/login']);
+
     }
+
+    // helpers
+    setToken(token: string) {
+        localStorage.setItem('currentUser', token);
+    }
+
+    getToken() {
+        return localStorage.getItem('currentUser');
+    }
+
+
+    getUserPayload() {
+        let token = this.getToken();
+        if (token) {
+          let userPayload = atob(token.split('.')[1]);
+          return JSON.parse(userPayload);
+        }
+        else
+          return null;
+      }
 }
